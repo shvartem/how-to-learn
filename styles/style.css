@@ -10,14 +10,6 @@
   box-sizing: border-box;
 }
 
-.centered-block {
-  margin: 0 auto;
-}
-
-.text {
-  margin: 0;
-}
-
 /* Header */
 
 .header {
@@ -32,7 +24,7 @@
   align-items: center;
 }
 
-.logo__place_header {
+.logo_place_header {
   width: 183px;
   height: 32px;
   position: absolute;
@@ -42,7 +34,8 @@
 }
 
 .header__title {
-  width: 730px;
+  margin: 0;
+  max-width: 730px;
   margin-left: 64px;
   font-size: 102px;
   font-weight: bold;
@@ -51,7 +44,8 @@
 }
 
 .header__subtitle {
-  width: 388px;
+  margin: 0;
+  max-width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -62,6 +56,7 @@
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -100,14 +95,16 @@
 }
 
 .two-columns__brief {
-  width: 175px;
+  margin: 0;
+  max-width: 175px;
+  min-width: 175px; /* Нужно пофиксить в старой версии!!! */
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
 }
 
-.two-columns__main-text {
+.two-columns__main {
   width: 80%;
   min-width: 784px;
   line-height: 34px;
@@ -116,6 +113,7 @@
 }
 
 .two-columns__paragraph {
+  margin: 0;
   margin-bottom: 30px;
 }
 
@@ -132,13 +130,14 @@
 .digits {
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.section-title__title {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 60px;
   line-height: 1.15;
   font-weight: bold;
@@ -147,6 +146,7 @@
 }
 
 .section-subtitle {
+  margin: 0;
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
@@ -155,6 +155,9 @@
 }
 
 .table {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   width: 1100px;
   display: flex;
   justify-content: space-between;
@@ -167,12 +170,14 @@
 }
 
 .table__heading {
+  margin: 0;
   font-size: 24px;
   line-height: 1.15;
   font-weight: bold;
 }
 
 .table__text {
+  margin: 0;
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
@@ -182,8 +187,7 @@
 /* Feynman */
 
 .feynman {
-  box-sizing: border-box;
-  height: 790px;
+  min-height: 790px;
   padding-top: 100px;
   position: relative;
   background-color: #f2f2f2;
@@ -193,15 +197,16 @@
 }
 
 .feynman__title {
+  margin: 0 auto 70px;
   font-size: 120px;
   line-height: 1.15;
   font-weight: bold;
   text-align: center;
-  width: 648px;
-  margin: 0 auto 70px;
+  max-width: 648px;
 }
 
 .feynman__subtitle {
+  margin: 0;
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
@@ -213,6 +218,7 @@
   line-height: 51px;
   font-weight: normal;
   text-decoration: none;
+  color: #2f80ed;
   position: absolute;
   top: 50%;
   right: 48px;
@@ -226,14 +232,9 @@
   padding-bottom: 90px;
   position: relative;
   overflow: hidden;
-  z-index: -2;
-}
-
-.table__cell_theme_dark {
-  width: 200px;
-  color: #fff;
-  margin-right: 0;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title_theme_dark {
@@ -244,12 +245,25 @@
   color: #fff;
 }
 
+.table__cell_theme_dark {
+  width: 200px;
+  color: #fff;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 2;
+}
+
 .kaufman__triangle {
+  width: 877px;
   height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Footer */
@@ -257,16 +271,15 @@
 .footer {
   box-sizing: border-box;
   min-height: 350px;
-  height: 1px;
   background-color: #1f1f1f;
   color: #fff;
   padding-top: 60px;
   padding-bottom: 40px;
+  display: flex;
 }
 
 .footer__columns {
   width: 90%;
-  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -285,6 +298,7 @@
 }
 
 .footer__author {
+  margin: 0;
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
@@ -293,7 +307,7 @@
 }
 
 .footer__column-heading {
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 30px;
