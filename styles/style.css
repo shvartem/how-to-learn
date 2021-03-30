@@ -104,7 +104,7 @@
   color: #2f80ed;
 }
 
-.two-columns__main {
+.two-columns__main-text {
   width: 80%;
   min-width: 784px;
   line-height: 34px;
@@ -239,10 +239,16 @@
 
 .section-title_theme_dark {
   color: #fff;
+  z-index: 2;
 }
 
 .section-subtitle_theme_dark {
   color: #fff;
+  z-index: 2;
+}
+
+.table_theme_dark {
+  z-index: 2;
 }
 
 .table__cell_theme_dark {
@@ -250,7 +256,6 @@
   color: #fff;
   margin-right: 0;
   margin-top: 80px;
-  z-index: 2;
 }
 
 .kaufman__triangle {
